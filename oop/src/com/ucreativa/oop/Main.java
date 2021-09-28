@@ -10,7 +10,7 @@ package com.ucreativa.oop;
 
 public class Main {
 
-    // MÉTODO ESTÁTICO
+    // Método Estático
     static String metodo(String var){
         var = var + "Prueba A";
         return var;
