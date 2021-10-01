@@ -1,4 +1,4 @@
-package com.ucreativa.oop;
+package com.ucreativa.oop.lab01;
 
 //Un proyecto de Java con IntelliJ
 //Crear variables de prueba de diferentes tipos (String, int, float, Boolean, Integer)
