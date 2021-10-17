@@ -1,34 +1,74 @@
 package com.ucreativa.oop.presupuesto;
-import java.util.ArrayList;
+
+import com.ucreativa.oop.presupuesto.entidades.Gasto;
+import com.ucreativa.oop.presupuesto.entidades.RegistroGastos;
+
+import java.util.Scanner;
+
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-    System.out.println("Mi nuevo Main");
 
-        Gasto gastoLuz = new Gasto();
-        gastoLuz.nombre = "Luz";
-        gastoLuz.moneda = "Colones";
-        gastoLuz.monto = 22000;
+        System.out.println("Sistema Registro de Gastos");
+        Scanner consola = new Scanner(System.in);
+        boolean siga = true;
 
-        Gasto gastoInternet = new Gasto();
-        gastoInternet.nombre = "Internet";
-        gastoInternet.moneda = "Dolares";
-        gastoInternet.monto = 30;
+
+        while (siga){
+
+        System.out.println("Digite el nombre de su gasto:");
+        consola.nextLine();
+
+        System.out.println("Digite la Moneda");
+        String moneda = consola.nextLine();
+
+        System.out.println("Digite la categoria de su gasto");
+        String categoria = consola.nextLine();
+
+        System.out.println("Digite el monto de su gasto:");
+        String montoStr = consola.nextLine();
+        int monto = Integer.parseInt(montoStr);
+
+
+        Gasto nuevoGasto = new Gasto("luz",
+                "Colones",
+                "Servicios",
+                22000);
+
+
+        Gasto gastoInternet = new Gasto("luz",
+                "Dolares",
+                "Servicios",
+                30);
 
         RegistroGastos registro = new RegistroGastos();
-        registro.gastos = new ArrayList<>();
-        registro.gastos.add(gastoLuz);
-        registro.gastos.add(gastoInternet);
+        registro.getGastos().add(nuevoGasto);
+        registro.getGastos().add(gastoInternet);
 
 
-         for (int i = 0; i < registro.gastos.size(); i++) {
-            System.out.println(registro.gastos.get(i).nombre);
-         }
+/*
+        for (int i = 0; i < registro.getGastos().size(); i++) {
+            System.out.println(registro.getGastos().get(i));
+        }
+
+*/
+
+ /*
+        for (Gasto gastico: registro.getGastos()){
+            System.out.println(gastico);
+*/
+        for (Gasto gastico: registro.getGastos()){
+            String nombre = nuevoGasto.getNombre();
+            System.out.println(nombre);
+        }
+
+        System.out.println("Quiere seguir?(¨s¨)");
+        siga = consola.nextLine().equals("s");
 
 
-
+        }
     }
 }
