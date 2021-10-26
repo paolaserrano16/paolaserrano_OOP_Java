@@ -21,6 +21,14 @@ public class Movimiento {
     }
 
     public String getNombre(){
+
         return this.nombre;
     }
-}
+
+
+    protected void imprimaHola(){
+        System.out.println("Hola");
+
+    }
+
+    }

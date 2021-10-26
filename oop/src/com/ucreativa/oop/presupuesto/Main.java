@@ -3,7 +3,9 @@ package com.ucreativa.oop.presupuesto;
 import com.ucreativa.oop.presupuesto.entidades.Gasto;
 import com.ucreativa.oop.presupuesto.entidades.Ingreso;
 import com.ucreativa.oop.presupuesto.entidades.Movimiento;
-import com.ucreativa.oop.presupuesto.entidades.RegistroMovimientos;
+import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionRegistro;
+import com.ucreativa.oop.presupuesto.logicaNegocio.ImplementacionSuperDummy;
+import com.ucreativa.oop.presupuesto.logicaNegocio.InterfaceRegistro;
 
 import java.util.Scanner;
 
@@ -18,6 +20,16 @@ public class Main {
         System.out.println("Sistema Registro de Movimientos");
         Scanner consola = new Scanner(System.in);
         boolean siga = true;
+        System.out.println("Que quiere usar? Fake (F):");
+        InterfaceRegistro registro;
+        if (consola.nextLine().equals("F")){
+            registro = new ImplementacionSuperDummy();
+        } else {
+            registro = new ImplementacionRegistro();
+    }
+
+
+
 
         while (siga){
 
@@ -39,21 +51,31 @@ public class Main {
 
         System.out.println("Indique si es un Gasto (¨S¨)");
             if (consola.nextLine().equals("s")){
-                nuevoMovimiento = new Gasto(
+                String nombre = new String();
+                registro.addGasto(nombre,
                         moneda,
                         categoria,
-                        monto);
+                        montoStr);
 
            } else {
                 System.out.println("Especifique la Periodicidad: ");
                 String periodicidad = consola.nextLine();
-
-             nuevoMovimiento = new Ingreso(
+                String nombre = null;
+                registro.addIngreso(nombre,
                         moneda,
                         categoria,
                         monto,
                         periodicidad);
             }
+
+
+             /* nuevoMovimiento = new Ingreso(
+                        moneda,
+                        categoria,
+                        categoria,
+                        monto,
+                        periodicidad);
+            } */
 
 
 

@@ -6,7 +6,7 @@ public class Ingreso extends Movimiento{
 
     public Ingreso(String nombre,
                    String moneda,
-                   int monto,
+                   String categoria, int monto,
                    String periodicidad){
         super(nombre, moneda, monto);
         this.periodicidad = periodicidad;
