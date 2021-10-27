@@ -24,11 +24,12 @@ public class ImplementacionRegistro implements InterfaceRegistro {
     }
 
     @Override
-    public void addIngreso(String nombre, String moneda, String categoria, int montoStr, String periodicidad) {
+    public void addIngreso(String s, String nombre, String moneda, String categoria, String periodicidad) {
 
         if (!moneda.equals("USD")){
             System.out.println("Moneda No validad");
         } else {
+            int montoStr = 0;
             int monto = Integer.parseInt(String.valueOf(montoStr));
             this.movimientos.add(new Ingreso(nombre,
                     moneda,
@@ -40,14 +41,9 @@ public class ImplementacionRegistro implements InterfaceRegistro {
 
     @Override
     public void addGasto(String nombre, String moneda, String categoria, String montoStr) {
-        int monto = Integer.parseInt(montoStr);
-        this.movimientos.add(new Gasto(nombre,
-                moneda,
-                categoria,
-                monto));
+
     }
 
-    // Methodo 3
     public void getGastos(){
 
         for (Movimiento movimiento : this.movimientos){

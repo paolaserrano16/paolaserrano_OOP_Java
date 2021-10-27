@@ -16,4 +16,24 @@ public class Ingreso extends Movimiento{
     public String getNombre(){
         return super.getNombre() + " " + this.periodicidad;
     }
+
+    @Override
+    public String getDetails() {
+        return null;
+    }
+
+    @Override
+    protected String getMoneda() {
+        return null;
+    }
+
+    @Override
+    protected String getCategoria() {
+        return null;
+    }
+
+    @Override
+    protected String getMonto() {
+        return null;
+    }
 }

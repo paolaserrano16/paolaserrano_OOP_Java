@@ -1,12 +1,23 @@
 package com.ucreativa.oop.presupuesto.entidades;
 
 
-public class Gasto extends Movimiento{
+public abstract class Gasto extends Movimiento{
 
-    public Gasto(String s, String nombre, String categoria, int monto) {
-        super(nombre, categoria, monto);
+    public Gasto(String nombre,
+                 String moneda,
+                 String categoria,
+                 int monto) {
+        super(nombre, moneda, monto);
+
+
     }
 
+    @Override
+    public String getDetails() {
+        return "GASTO: " + this.getNombre() + " - " +
+                this.getMoneda() + " - " +
+                this.getCategoria() + " - " +
+                this.getMonto();
+    }
 }
-
 
