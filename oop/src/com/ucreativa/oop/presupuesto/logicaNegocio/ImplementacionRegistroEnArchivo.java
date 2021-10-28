@@ -34,7 +34,7 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
                 moneda,
                 categoria,
                 monto) {
-            @Override
+           /* @Override
             protected String getMoneda() {
                 return null;
             }
@@ -47,7 +47,7 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
             @Override
             protected String getMonto() {
                 return null;
-            }
+            }*/
         };
         return this.repository.save(gasto.getDetails());
     }
@@ -63,7 +63,8 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
     }
 
     @Override
-    public void addIngreso(String text, String text1, String text2, String text3, String text4) {
+    public boolean addIngreso(String text, String text1, String text2, String text3, String text4) {
 
+        return false;
     }
 }

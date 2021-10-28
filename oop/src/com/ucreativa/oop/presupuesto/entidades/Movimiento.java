@@ -1,18 +1,18 @@
 package com.ucreativa.oop.presupuesto.entidades;
 import java.util.Date;
-
-
-
 public abstract class Movimiento {
-    public String nombre;
-    public String moneda;
-    public String categoria;
-    public int monto;
-    public Date fecha;
+    private String nombre;
+    private String moneda;
+    private String categoria;
+    private int monto;
+    private Date fecha;
+
+    public Movimiento(){}
 
 
-    public Movimiento(String s, String nombre,
+    public Movimiento(String nombre,
                       String moneda,
+                      String categoria,
                       int monto){
         this.nombre = nombre;
         this.moneda = moneda;
@@ -20,31 +20,22 @@ public abstract class Movimiento {
         this.monto = monto;
         this.fecha = new Date();
     }
-
-    public Movimiento() {
-
-    }
-
-    public String getNombre(){
-
+    // Este Metodo es el Abstracto
+    public abstract String getDetails();
+    // Defaults Gets
+    String getNombre(){
         return this.nombre;
     }
-
-    public void loquesea(){
-        System.out.println("Lo que sea");
+    String getMoneda() {
+        return moneda;
     }
-
-    protected void imprimaHola(){
-        System.out.println("Hola");
-
+    String getCategoria() {
+        return categoria;
     }
-
-    public abstract String getDetails();
-
-    protected abstract String getMoneda();
-
-    protected abstract String getCategoria();
-
-    protected abstract String getMonto();
+    int getMonto() {
+        return monto;
+    }
+    Date getFecha() {
+        return fecha;
+    }
 }
-

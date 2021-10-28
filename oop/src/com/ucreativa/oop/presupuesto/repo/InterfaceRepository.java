@@ -1,10 +1,12 @@
 package com.ucreativa.oop.presupuesto.repo;
 
+import java.util.List;
+
 public interface InterfaceRepository {
 
-   // boolean save (String text);
-    boolean save (String text) throws ErrorMuyPocaData ;
+    boolean save (String text) throws ErrorMuyPocaData;
 
-    void read ();
+  //  void read ();
+    List<String> read ();
 
 }

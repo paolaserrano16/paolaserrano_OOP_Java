@@ -1,7 +1,7 @@
 package com.ucreativa.oop.presupuesto.entidades;
 
 
-public abstract class Gasto extends Movimiento{
+public class Gasto extends Movimiento{
 
     public Gasto(String nombre,
                  String moneda,

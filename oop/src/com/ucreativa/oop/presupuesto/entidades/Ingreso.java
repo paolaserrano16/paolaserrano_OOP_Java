@@ -39,8 +39,5 @@ package com.ucreativa.oop.presupuesto.entidades;
             return null;
         }
 
-        @Override
-        protected String getMonto() {
-            return null;
-        }
+
     }
