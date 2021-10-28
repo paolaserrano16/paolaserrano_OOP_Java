@@ -23,7 +23,7 @@ public class Main {
         Scanner consola = new Scanner(System.in);
         boolean siga = true;
         System.out.println("Que quiere usar? Fake (F):");
-        System.out.println("Que quiere usar? Fake? (F):");
+
         InterfaceRegistro registro;
         if (consola.nextLine().equals("F")){
             if (consola.nextLine().equals("F")) {
