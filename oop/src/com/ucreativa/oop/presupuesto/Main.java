@@ -41,7 +41,7 @@ public class Main {
                 System.out.println("Digite el nombre de su Movimiento:");
                 consola.nextLine();
 
-                System.out.println("Digite la Moneda");
+                System.out.println("Digite la Moneda:");
                 String moneda = consola.nextLine();
             }
 
