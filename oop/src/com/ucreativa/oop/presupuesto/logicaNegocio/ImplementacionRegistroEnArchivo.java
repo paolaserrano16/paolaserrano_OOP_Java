@@ -3,6 +3,7 @@ package com.ucreativa.oop.presupuesto.logicaNegocio;
 import com.ucreativa.oop.presupuesto.entidades.Gasto;
 import com.ucreativa.oop.presupuesto.entidades.Ingreso;
 import com.ucreativa.oop.presupuesto.entidades.Movimiento;
+import com.ucreativa.oop.presupuesto.repo.ErrorMuyPocaData;
 import com.ucreativa.oop.presupuesto.repo.InterfaceRepository;
 
 public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
@@ -16,8 +17,8 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
 
 
     @Override
-    public boolean addIngreso(String nombre, String moneda, String categoria, String montoStr, String periodicidad) {
-        int monto = Integer.parseInt(montoStr);
+    public boolean addIngreso(String nombre, String moneda, String categoria, int monto, String montoStr, String periodicidad) throws ErrorMuyPocaData {
+       // int monto = Integer.parseInt(montoStr);
         Ingreso ingreso = new Ingreso(nombre,
                 moneda,
                 categoria,
@@ -27,7 +28,7 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
     }
 
     @Override
-    public boolean addGasto(String nombre, String moneda, String categoria, String montoStr) {
+    public boolean addGasto(String nombre, String moneda, String categoria, String montoStr) throws ErrorMuyPocaData {
         int monto = Integer.parseInt(montoStr);
         Movimiento gasto = new Gasto(nombre,
                 moneda,
@@ -59,5 +60,10 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
     @Override
     public void getGastos() {
         this.repository.read();
+    }
+
+    @Override
+    public void addIngreso(String text, String text1, String text2, String text3, String text4) {
+
     }
 }

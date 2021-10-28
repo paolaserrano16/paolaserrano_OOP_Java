@@ -9,7 +9,7 @@ public abstract class Movimiento {
     public String categoria;
     public int monto;
     public Date fecha;
-    protected Movimiento[] movimientos;
+
 
     public Movimiento(String s, String nombre,
                       String moneda,
@@ -19,6 +19,10 @@ public abstract class Movimiento {
         this.categoria = categoria;
         this.monto = monto;
         this.fecha = new Date();
+    }
+
+    public Movimiento() {
+
     }
 
     public String getNombre(){

@@ -15,6 +15,11 @@ package com.ucreativa.oop.presupuesto.entidades;
             super(nombre, moneda, categoria, monto);
             this.periodicidad = periodicidad;
         }
+
+        public Ingreso() {
+            super();
+        }
+
         @Override
         public String getDetails() {
             return "INGRESO: " + this.getNombre() + " - " +
