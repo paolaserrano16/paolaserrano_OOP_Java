@@ -1,9 +1,9 @@
 package com.ucreativa.oop.presupuesto.logicaNegocio;
+
 import com.ucreativa.oop.presupuesto.entidades.Gasto;
 import com.ucreativa.oop.presupuesto.entidades.Ingreso;
 import com.ucreativa.oop.presupuesto.entidades.Movimiento;
 import com.ucreativa.oop.presupuesto.repo.InterfaceRepository;
-
 
 public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
 
@@ -16,9 +16,8 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
 
 
     @Override
-    public boolean addIngreso(String s, String nombre, String moneda, String categoria, String periodicidad) {
-        CharSequence montoStr = null;
-        int monto = Integer.parseInt((String) montoStr);
+    public boolean addIngreso(String nombre, String moneda, String categoria, String montoStr, String periodicidad) {
+        int monto = Integer.parseInt(montoStr);
         Ingreso ingreso = new Ingreso(nombre,
                 moneda,
                 categoria,
@@ -51,7 +50,6 @@ public class ImplementacionRegistroEnArchivo implements InterfaceRegistro {
         };
         return this.repository.save(gasto.getDetails());
     }
-
 
     @Override
     public void getMovimientos() {

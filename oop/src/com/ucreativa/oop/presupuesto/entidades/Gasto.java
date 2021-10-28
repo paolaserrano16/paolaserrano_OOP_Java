@@ -7,13 +7,13 @@ public abstract class Gasto extends Movimiento{
                  String moneda,
                  String categoria,
                  int monto) {
-        super(nombre, moneda, monto);
+        super(nombre, nombre, moneda, monto);
 
 
     }
 
     public Gasto(String nombre, String s1, int monto) {
-        super(nombre, s1, monto);
+        super(nombre, nombre, s1, monto);
     }
 
     @Override

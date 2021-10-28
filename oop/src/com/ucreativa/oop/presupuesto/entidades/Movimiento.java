@@ -9,8 +9,9 @@ public abstract class Movimiento {
     public String categoria;
     public int monto;
     public Date fecha;
+    protected Movimiento[] movimientos;
 
-    public Movimiento(String nombre,
+    public Movimiento(String s, String nombre,
                       String moneda,
                       int monto){
         this.nombre = nombre;
