@@ -45,7 +45,7 @@ public class FrontEnd extends JFrame {
 
 
         // ACTIONS
-        ckIsIngreso.addActionListener(new AbstractAction() {
+        ckIsIngreso.addActionListener(new AbstractAction()  {
             @Override
             public void actionPerformed(ActionEvent e) {
                 lblPeriodicidad.setVisible(!lblPeriodicidad.isVisible());

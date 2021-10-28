@@ -10,6 +10,6 @@ public class FormatoInvalido extends NumberFormatException {
     }
 
     public String getMessage(){
-        return "Formato Invalido en ("+this.montoStr+"): " + super.getMessage();
+        return "Formato Invalido en ("+this.montoStr+ ") : " + super.getMessage();
     }
 }

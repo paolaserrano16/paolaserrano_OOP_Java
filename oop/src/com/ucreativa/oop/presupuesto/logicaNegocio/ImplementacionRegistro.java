@@ -24,7 +24,7 @@ public class ImplementacionRegistro implements InterfaceRegistro {
             try {
                 monto = Integer.parseInt(montoStr);
             }catch (NumberFormatException ex){
-                System.out.println("Formato Invalido en ("+montoStr+"): " + ex.getMessage());
+                System.out.println("Formato Invalido en ("+montoStr+") : " + ex.getMessage());
                 return false;
             }
 

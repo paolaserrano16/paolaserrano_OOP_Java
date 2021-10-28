@@ -7,7 +7,7 @@ public class FileRepository implements InterfaceRepository{
     @Override
     public boolean save(String text) throws ErrorMuyPocaData {
 
-            if (text.replace(" - ", "").replace("INGRESO: ", "").trim().length() < 5){
+            if (text.replace(" - ", "").replace("INGRESO : ", "").trim().length() < 5){
                 throw new ErrorMuyPocaData(text);
             }
             try (FileWriter fileWriter = new FileWriter(this.FILE_PATH, true);

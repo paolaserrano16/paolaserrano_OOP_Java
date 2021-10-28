@@ -8,7 +8,7 @@ public interface InterfaceRegistro {
     boolean addIngreso(String nombre, String moneda, String categoria, int monto, String montoStr, String periodicidad) throws ErrorMuyPocaData;
 
    // boolean addGasto(String nombre, String moneda, String categoria, String montoStr);
-    boolean addGasto(String nombre, String moneda, String categoria, String montoStr) throws ErrorMuyPocaData;
+    boolean addGasto(String nombre , String moneda, String categoria, String montoStr) throws ErrorMuyPocaData;
 
     void getMovimientos();
 
