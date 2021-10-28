@@ -11,13 +11,16 @@ public class ImplementacionSuperDummy implements InterfaceRegistro, InterfaceRep
     }
 
     @Override
-    public void addIngreso(String s, String nombre, String moneda, String categoria, String periodicidad) {
+    public boolean addIngreso(String s, String nombre, String moneda, String categoria, String periodicidad) {
         System.out.println("No haga nada");
+        return false;
+
     }
 
     @Override
-    public void addGasto(String nombre, String moneda, String categoria, String montoStr) {
+    public boolean addGasto(String nombre, String moneda, String categoria, String montoStr) {
         System.out.println("No haga nada");
+        return false;
     }
 
     @Override

@@ -40,7 +40,7 @@ public class FrontEnd extends JFrame {
 
         JButton salvar = new JButton("Salvar");
         JButton reporte = new JButton("Reporte");
-        InterfaceRegistro registo = new ImplementacionRegistro();
+        InterfaceRegistro registro = new ImplementacionRegistro();
 
 
         // ACTIONS
@@ -56,13 +56,13 @@ public class FrontEnd extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (ckIsIngreso.isSelected()){
-                    registo.addIngreso(txtNombre.getText(),
+                    registro.addIngreso(txtNombre.getText(),
                             txtMoneda.getText(),
                             txtCategoria.getText(),
                             txtMonto.getText(),
                             txtPeriodicidad.getText());
                 }else {
-                    registo.addGasto(txtNombre.getText(),
+                    registro.addGasto(txtNombre.getText(),
                             txtMoneda.getText(),
                             txtCategoria.getText(),
                             txtMonto.getText());
@@ -72,8 +72,8 @@ public class FrontEnd extends JFrame {
         reporte.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                registo.getGastos();
-                registo.getMovimientos();
+                registro.getGastos();
+                registro.getMovimientos();
             }
         });
 

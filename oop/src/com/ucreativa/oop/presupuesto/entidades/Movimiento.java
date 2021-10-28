@@ -25,7 +25,9 @@ public abstract class Movimiento {
         return this.nombre;
     }
 
-
+    public void loquesea(){
+        System.out.println("Lo que sea");
+    }
 
     protected void imprimaHola(){
         System.out.println("Hola");
